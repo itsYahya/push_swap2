@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 15:08:26 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/02/19 14:39:57 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/02/19 15:38:25 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,8 @@ int	main(int argc, char **argv)
 	{
 		data.stack_a.items = (t_item *)malloc(sizeof(t_list) * (argc - 1));
 		data.stack_b.items = (t_item *)malloc(sizeof(t_list) * (argc - 1));
+		if (!data.stack_a.items || !data.stack_b.items)
+			return (0);
 		ft_init(&data, argv + 1, argc - 1);
 		ft_checkdup(&data);
 		ft_get_positions(&data);
@@ -132,12 +134,6 @@ int	main(int argc, char **argv)
 			else if (data.stack_a.data.lenght <= 500)
 				main_sort(&data, 10);
 		}
-		// int	index = 0;
-		// while (index < data.stack_a.data.lenght)
-		// {
-		// 	printf("%d |\n", data.stack_a.items[index].position);
-		// 	index++;
-		// }
 		ft_free(&data, 0);
 	}
 	return (0);

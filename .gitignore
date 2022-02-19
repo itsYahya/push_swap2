@@ -1,5 +1,10 @@
-./a.out
-./checher_Mac
-./gen.py
-./test.sh
+a.out
+checker_Mac
+gen.py
+test.sh
+.DS_Store
+push_swap
+pyviz.py
+text
+*.o
 push_swap_visualizer

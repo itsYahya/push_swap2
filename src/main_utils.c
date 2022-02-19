@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 15:45:17 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/02/16 19:09:48 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/02/19 15:38:56 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_free(t_data *data, int ko)
 	if (ko)
 	{
 		write(2, "Error\n", 6);
-		exit(0);
+		exit(1);
 	}
 }
 

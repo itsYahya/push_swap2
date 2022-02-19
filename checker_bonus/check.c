@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 14:31:23 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/02/18 17:15:08 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/02/19 15:19:46 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,39 +90,42 @@ int	make_moves(t_data *data, char *move, int number)
 		return (make_moves_1(data, move, number));
 }
 
+int	ft_read(char *str)
+{
+	int		index;
+	int		number;
+	char	ch;
+	
+	number = 0;
+	index = 0;
+	ch = 0;
+	while (1)
+	{
+		index += read(0, &ch, 1);
+		str[number++] = ch;
+		if (number > 4 || ch == '\n' || index == 0)
+		{
+			str[number] = 0;
+			break;
+		}
+	}
+	return (index);
+}
+
 void	check_moves(t_data *data)
 {
 	int		number;
-	char	buffer[5];
-	char	ch;
-	int		index;
+	char	buffer[6];
 	
-	index = 0;
 	number = 0;
 	while (1)
 	{
-		index = 0;
-		while (1)
-		{
-			number = read(0, &ch, 1);
-			if (index >= 4 || buffer[index] == '\n' || number == 0)
-			{
-				buffer[index + 1] = 0;
-				break ;
-			}
-			index++;
-		}
+		number = ft_read(buffer);
 		if (number == 0)
 			break ;
-		if (!make_moves(data, buffer, 5))
+		if (!make_moves(data, buffer, number))
 			ft_free(data, 0, 1);
 	}
-	// int	index = 0;
-	// while (index < data->stack_a.data.lenght)
-	// {
-	// 	printf("%d | %d\n", data->stack_a.items[index].position, data->stack_a.items[index].value);
-	// 	index++;
-	// }
 	if (!ft_sorted(data) && data->stack_b.data.lenght == 0)
 		write(1, "OK\n", 3);
 	else
