@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 13:22:24 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/02/18 15:40:29 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/02/19 14:30:50 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	push_stack(t_data *data, int to_do)
 	}
 	else if (to_do == 'b' && data->stack_a.data.lenght > 0)
 	{
-		write(1, "pb\n", 4);
+		write(1, "pb\n", 3);
 		push_to(&data->stack_a, &data->stack_b);
 	}
 }
