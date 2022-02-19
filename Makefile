@@ -6,7 +6,7 @@
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/18 13:22:30 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/02/18 15:40:50 by yel-mrab         ###   ########.fr        #
+#    Updated: 2022/02/19 16:10:09 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ B_NAME = bonus_checker
 
 M_SRC = src/main.c src/main_utils.c src/moves.c src/moves_2.c src/sort.c src/sort_utils.c src/basic_sort.c
 B_SRC = checker_bonus/main.c checker_bonus/main_utils.c checker_bonus/moves.c checker_bonus/moves_2.c \
-		checker_bonus/check.c checker_bonus/ft_strncmp.c checker_bonus/get_next_line_utils.c checker_bonus/get_next_line.c
+		checker_bonus/check.c checker_bonus/ft_strncmp.c
 
 M_OBJ = $(M_SRC:.c=.o)
 B_OBJ = $(B_SRC:.c=.o)

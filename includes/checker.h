@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 13:55:57 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/02/18 15:16:37 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/02/19 16:08:39 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ void	ft_init(t_data *data, char **args, int count);
 t_var	ft_atoi(char *number);
 void	check_moves(t_data *data);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
-char	*get_next_line(int fd);
 
 #endif
